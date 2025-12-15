@@ -26,7 +26,7 @@ public class Exercise1 {
           for (int j = 0; j < items.length; j++) {
             Person person2 = items[j];
             
-            if (person.height < person2.height) {
+            if (person.getHeight() < person2.getHeight()) {
               int indexAinSortedArray = relation.get(i);
               int indexBinSortedArray = relation.get(j);
               
@@ -48,8 +48,8 @@ public class Exercise1 {
         double heightsMedia = 0;
 
         for (int i = 0; i < persons.length; i++) {
-            if (persons[i].sex == Sex.MALE) {
-                heightsMedia += persons[i].height;
+            if (persons[i].getSex() == Sex.MALE) {
+                heightsMedia += persons[i].getHeight();
             };
         };
 
@@ -62,7 +62,7 @@ public class Exercise1 {
         int womansTotal = 0;
 
         for (int i = 0; i < persons.length; i++) {
-            if (persons[i].sex == Sex.FEMALE) {
+            if (persons[i].getSex() == Sex.FEMALE) {
                 womansTotal += 1;
             };
         };
@@ -85,8 +85,8 @@ public class Exercise1 {
         double menHeightMedia = getMenHeightMedia(sortedPeopleByHeight);
         int womansTotal = getWomansTotal(sortedPeopleByHeight);
 
-        System.out.println("The heighest in the room!: " + sortedPeopleByHeight[0]);
-        System.out.println("The lowest in the room!: " + sortedPeopleByHeight[sortedPeopleByHeight.length - 1]);
+        System.out.println("The heighest in the room!: " + sortedPeopleByHeight[0].getNameAndHeight());
+        System.out.println("The lowest in the room!: " + sortedPeopleByHeight[sortedPeopleByHeight.length - 1].getNameAndHeight());
         System.out.println("The media of the Mens height: " + menHeightMedia);
         System.out.println("The total of woman: " + womansTotal);
     }

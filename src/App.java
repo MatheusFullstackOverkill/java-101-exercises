@@ -1,4 +1,5 @@
 import exercise1.*;
+import exercise2.Exercise2;
 
 
 public class App {
@@ -6,5 +7,6 @@ public class App {
         System.out.println("Hello, World!");
 
         Exercise1.main();
+        Exercise2.main();
     }
 }
