@@ -86,7 +86,7 @@ abstract class Vehicle {
     }
 
     public void drive(Integer kms) {
-        if(requiredRepair != "") {
+        if(!requiredRepair.equals("")) {
             System.out.println("Vehicle cannot drive, it requires the repair: " + requiredRepair);
 
             return;
@@ -101,7 +101,7 @@ abstract class Vehicle {
         this.engine.setOil(newOilLevel);
         this.requiredRepair = newOilLevel <= 0 ? "Oil change" : "";
 
-        if (this.requiredRepair != "") {
+        if (!this.requiredRepair.equals("")) {
           System.out.println("The car requires a repair: " + this.requiredRepair);  
         };
     }

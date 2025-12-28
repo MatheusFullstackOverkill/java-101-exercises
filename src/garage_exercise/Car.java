@@ -16,7 +16,7 @@ class Car extends Vehicle {
     }
 
     public void drift() {
-        if(requiredRepair != "") {
+        if(!requiredRepair.equals("")) {
             System.out.println("Vehicle cannot perform drift, it requires repair: " + requiredRepair);
 
             return;
@@ -40,7 +40,7 @@ class Car extends Vehicle {
             this.requiredRepair = "Breakdown";
         };
 
-        if (this.requiredRepair != "") {
+        if (!this.requiredRepair.equals("")) {
           System.out.println("The car requires a repair: " + this.requiredRepair + ".");  
         };
     }
