@@ -6,6 +6,8 @@ class Garage {
     private Integer totalVehiclesRepaired = 0;
 
     void acceptVehicle(Vehicle vehicle, String repairName) {
+        System.out.println("The vehicle: " + vehicle.getModel() + " is trying the enter the garage");
+
         if (this.currentVehicle != null) {
             System.out.println("There's already a vehicle in repair: " + this.currentVehicle.getModel() + ", the garage can only repair one vehicle at a time.");
 
@@ -13,6 +15,8 @@ class Garage {
         };
 
         this.currentVehicle = vehicle;
+
+        System.out.println("The vehicle: " + this.currentVehicle.getModel() + " has entered the garage");
 
         double f = Math.random()/Math.nextDown(1.0);
         double price = 10*(1.0 - f) + 1000*f;
@@ -25,6 +29,8 @@ class Garage {
         vehicle.engine.setOil(newCurrentOil);
 
         this.totalVehiclesRepaired += 1;
+
+        System.out.println("The vehicle: " + this.currentVehicle.getModel() + " has been fixed");
     }
 
     public void returnVehicle() {
@@ -34,8 +40,8 @@ class Garage {
             return;
         };
 
-        this.currentVehicle = null;
+        System.out.println("The vehicle: " + this.currentVehicle.getModel() + " has returned.");
 
-        System.out.println("The vehicle has returned.");
+        this.currentVehicle = null;
     }
 }

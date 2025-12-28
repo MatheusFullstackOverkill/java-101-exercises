@@ -37,10 +37,14 @@ public class GarageExercise {
 
         garage.acceptVehicle(car, car.getRequiredRepair());
 
+        System.out.println("Motorbike's most recent repair:");
         System.out.println(motorbike.getMostRecentRepair());
+        System.out.println("Motorbike's history from most expensive to least expensive:");
         System.out.println(motorbike.getRepairHistoryByMostExpensivePrice());
 
+        System.out.println("Car's most recent repair:");
         System.out.println(car.getMostRecentRepair());
+        System.out.println("Car's history from most expensive to least expensive:");
         System.out.println(car.getRepairHistoryByMostExpensivePrice());
     }
 }
